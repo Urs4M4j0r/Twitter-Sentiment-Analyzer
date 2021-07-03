@@ -20,6 +20,7 @@ def runNewsAssessment(text):
 
     
 def assess_sentiment(tweets):
+    divzero = False
     spos = 0
     pos = 0
     vpos = 0
@@ -59,10 +60,14 @@ def assess_sentiment(tweets):
             vpos += 1
         #graph.createGraph(pos, neu, neg)
         #print(i)
+    try:    
+        totalAvgTB = totalTB / len(tweets)
+        totalAvgVader = totalVader / len(tweets)
+    except ZeroDivisionError:
+        divzero = True
         
-    totalAvgTB = totalTB / len(tweets)
-    totalAvgVader = totalVader / len(tweets)
-    return totalAvgVader, totalAvgTB, pos, neu, neg, vpos, spos, sneg, vneg
+
+    return totalAvgVader, totalAvgTB, pos, neu, neg, vpos, spos, sneg, vneg, divzero
 
 def urlEncode(term):
     termURL = urllib.parse.quote(term)

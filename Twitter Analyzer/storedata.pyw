@@ -1,7 +1,7 @@
 
-def writeData(score, date):
+def writeData(score, date, term):
     f = open("data.txt", "a")
-    f.write('\n' + score + ':' + date)
+    f.write('\n' + term + ' - ' + score + ':' + date)
     f.close()
 
 #writeData('score', 'date')

@@ -5,7 +5,6 @@ import nlp
 from datetime import date
 import graph
 import newsAnalysis
-import cryptopriceapi
 import storedata
 import configparser
 
@@ -82,17 +81,19 @@ def printSent(sentScoreV, sentScoreTB, outString, selector):
     else:
         out = outString + '\n' + '\n' + "Average VADER sentiment is: " + sentScoreV[0:5] + ' ' + measureText(sentScoreV)
         
+    '''
     if int(Cryptoselector.get()) == 1:
         out2 = out + '\n' + '\n' + str(selectedCrypto.get()) + ' 24h price change:' + str(cryptopriceapi.getCryptoPriceChange24h(selectedCrypto.get())) + '%'
     else:
         out2 = out
+    '''
 
     dateSel2 = todaySelector.get()
     if dateSel2 == 1:
         datetoprint2 = str(date.today())
     else:
         datetoprint2 = searchDateText.get()
-    storedata.writeData(str(sentScoreV[0:5]), datetoprint2) 
+    storedata.writeData(str(sentScoreV[0:5]), datetoprint2, searchTermText.get()) 
     window.after(5000, updateMessage, out2)
     
     
@@ -316,16 +317,16 @@ newsButton.place(x=275, y=450)
 helpButton = Button(window, text="About", relief = "groove", height = 1, width = 8, command=launchHelp) #command=openTesterWindow)
 helpButton.place(x=0, y=0)
 
-
+'''
 #Create combobox for crypto selection
 selectedCrypto = StringVar()
 textlblTypeCrypto = Label(window, text="Choose crypto:")
 textlblTypeCrypto.place(x=106, y=525)
 comboOptionsCrypto = ['bitcoin', 'dogecoin', 'cardano', 'litecoin',\
-                      'crypto-com-coin', 'chia-network']
+                      'crypto-com-coin', 'chia-network', 'scala']
 
 #not working - eth, bin, xrp, teth, 
-
+'''
 
 comboCrypto = ttk.Combobox(window, values = comboOptionsCrypto, textvariable=selectedCrypto, width=15)
 comboCrypto.place(x=206, y=525)
