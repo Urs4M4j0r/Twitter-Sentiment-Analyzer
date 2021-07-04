@@ -304,7 +304,6 @@ executeButton.place(x=75, y=350)
 exitButton = Button(window, text="Quit", fg = "white", bg = "red", relief = "raised", height = 2, width = 10, command=exitProgram)
 exitButton.place(x=275, y=350)
 
-
 #Create print graph button
 testerButton = Button(window, text="Create Graph", fg = "white", bg = "blue", relief = "raised", height = 2, width = 15, command=printGraph) #command=openTesterWindow)
 testerButton.place(x=75, y=450)
@@ -317,34 +316,11 @@ newsButton.place(x=275, y=450)
 helpButton = Button(window, text="About", relief = "groove", height = 1, width = 8, command=launchHelp) #command=openTesterWindow)
 helpButton.place(x=0, y=0)
 
-'''
-#Create combobox for crypto selection
-selectedCrypto = StringVar()
-textlblTypeCrypto = Label(window, text="Choose crypto:")
-textlblTypeCrypto.place(x=106, y=525)
-comboOptionsCrypto = ['bitcoin', 'dogecoin', 'cardano', 'litecoin',\
-                      'crypto-com-coin', 'chia-network', 'scala']
-
-#not working - eth, bin, xrp, teth, 
-'''
-
-comboCrypto = ttk.Combobox(window, values = comboOptionsCrypto, textvariable=selectedCrypto, width=15)
-comboCrypto.place(x=206, y=525)
-
-
-#Variable to get the checkbox status, checked = 1, unchecked = 0
-Cryptoselector = IntVar()
-#Create check button for textblob/VADER selection
-Cryptobutton = Checkbutton(window, width = 1, variable=Cryptoselector, onvalue=1, offvalue=0)
-Cryptobutton.place(x=75, y=525)
-
 window.iconbitmap("img.ico")
 
 #Create button to launch API enter window
 apiButton = Button(window, text="Edit API Keys", relief = "groove", height = 1, width = 12, command=launchEditAPIWindow)
 apiButton.place(x=75, y=0)
-
-
 
 #Create the GUI
 window.mainloop()
