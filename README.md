@@ -6,14 +6,20 @@ There are four main files included as part of this repository, `Gui.pyw`, `graph
 
 `Gui.pyw` - This is the main file as well as the one that should be executed to utilize the program. It creates the GUI and allows the user to enter all the required parameters to execute the program. Upon clicking the 'Execute' button the application will attempt to pull 100 tweets from the selected date using the provided keyword and spits out an average sentiment value which ranges from -1 to +1. Additionally, for ease a plan english description of the value is also printed, i.e. 'Good' or 'Bad'. See Usage for more information on setting the parameters.
 
-`graph.pyw` - The main GUI contains a button 'create
+`graph.pyw` - The main GUI contains a button labeled 'Create Graph', after running the program with the needed parameters and once the results have been displayed you may click this button to create a bar graph which shows the number of tweets which fit into each defined sentiment category. See Sentiment categories for more information on this
 
-`nlp.pyw` - 
+`nlp.pyw` - This file contains the Natural Language Processing (NLP) component of this projects and is responsible for the actual sentiment analysis perfromed by using Vader Sentiment analysis.
 
-`config.ini` - 
+`config.ini` - This is the file which stores Twitter API keys which are needed to use this application. See How can I use it? for more information
 
 # How can I use it?
-To use this project download/clone the repository and install needed dependencies. If you wish to collect your own data you may modify and use `gatedata.py`. Otherwise, this project comes with a sample file `output.csv` containing 14220 entries collected from June 27, 2021 23:02:21 GMT to July 03, 2021 03:11:18 GMT. These data were collected in 30 second intervals and shifted such that the last column displays the last price of SHIB 30 seconds in the future from the rest of that respective row. Note that if you decide to collect your own data you will need to perform this shift on the final column up to match with the time interval you are trying to model for.
+To use this project download/clone the repository and install the needed dependencies. Then execute the `Gui.pyw` file. (Note: if you are unaware .pyw simply means that the python console windows is not launched when the application is executed, unlike the standard .py extension.)
+
+
+
+
+
+If you wish to collect your own data you may modify and use `gatedata.py`. Otherwise, this project comes with a sample file `output.csv` containing 14220 entries collected from June 27, 2021 23:02:21 GMT to July 03, 2021 03:11:18 GMT. These data were collected in 30 second intervals and shifted such that the last column displays the last price of SHIB 30 seconds in the future from the rest of that respective row. Note that if you decide to collect your own data you will need to perform this shift on the final column up to match with the time interval you are trying to model for.
 
 Once you have your data collected and formatted you may execute `SHIB-ML-Gate.io.py` which allows you to select the input csv file. Once selected the script will ask for the number of prediction loops you would like to execute. A prediction loop is one iteration of the prediction cycle in which the script uses the trained model to predict the future price, waits for the timespan which it predicted for, pulls the actual price, compares this price to the predictions, and prints percent inaccuracy values for each of the 4 models. Additionally, a total average is kept such that if the predicition loop is run 10 times the average inaccuracies over the course of all 10 loops for each model are calculated and printed. This total average will print every ten loops if the number of loops selected is greater than 10.
 
