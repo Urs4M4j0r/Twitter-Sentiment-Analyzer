@@ -39,6 +39,23 @@ Upon executing `Gui.pyw` you will be met with the main window. The first thing y
 # How can I get Twitter API keys?
 To get twitter API keys see the Twitter documentatint for [How to get access to the Twitter API](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api)
 
+
+# Sentiment Categories
+VADER Sentiment analysis scored the sentiment of a statement from -1 (most negative) to +1 (most positive), this program breaks this range down into 7 categories to make it easier to interpret. These categories are as follows:
+
+| Numeric Score| Category|
+|--------------|---------|
+| -1.0 - -0.9| Very Bad|
+| -0.9 - -0.3| Bad|
+| -0.3 - -0.05| Slightly Bad|
+| -0.05 - 0.05| Neutral|
+| 0.05 - 0.3| Slightly Good|
+| 0.3 - 0.9| Good|
+| 0.9 - 1.0| Very Good|
+
+# Result Types
+
+
 # FAQ
 ### Why SHIB?
 There isn't really a satisfying answer for this. I wanted to use a currency which had a relatively high volume/active trading, a fair bit of volatility, and was inexpensive. Do not take this project as an endorsement or support of the SHIB cryptocurrency as I do not feel strongly about it one way or another.
