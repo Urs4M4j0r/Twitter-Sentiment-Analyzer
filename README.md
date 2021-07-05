@@ -61,14 +61,9 @@ VADER Sentiment analysis scored the sentiment of a statement from -1 (most negat
 | Popular| return only the most popular results in the response|
 
 
-# FAQ
-### What is VADER?
 
-
-### Why 30 second intervals?
-I wanted to be able to gather a fair bit of data without having to leave it running for a long time. Additionally, with the data at 30 second intervals it is easy to shift the last column and change the `time.sleep(30)` line in `SHIB-ML-Gate.io.py` to make the timescale longer while retaining a majority of the previously collected data. See [How can I use it?](https://github.com/ehoop10/SKlearn-Crypto-prediction/blob/main/README.md#how-can-i-use-it) for a little for information on this.
-
-
+# What is VADER?
+VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. If you would like more information see the project [here.](https://github.com/cjhutto/vaderSentiment).
 
 # Requirements
 This script was written using Python v3.9.5 as well as gate_api, numpy, and sklearn which all may be install via PIP or by using the included requirements.txt (pip install -r requirements.txt)
