@@ -54,11 +54,16 @@ VADER Sentiment analysis scored the sentiment of a statement from -1 (most negat
 | 0.9 to 1.0| Very Good|
 
 # Result Types
+| Type| Details|
+|-----|--------|
+| Mixed| Include both popular and real time results in the response.|
+| Recent| Return only the most recent results in the response|
+| Popular| return only the most popular results in the response|
 
 
 # FAQ
-### Why SHIB?
-There isn't really a satisfying answer for this. I wanted to use a currency which had a relatively high volume/active trading, a fair bit of volatility, and was inexpensive. Do not take this project as an endorsement or support of the SHIB cryptocurrency as I do not feel strongly about it one way or another.
+### What is VADER?
+
 
 ### Why 30 second intervals?
 I wanted to be able to gather a fair bit of data without having to leave it running for a long time. Additionally, with the data at 30 second intervals it is easy to shift the last column and change the `time.sleep(30)` line in `SHIB-ML-Gate.io.py` to make the timescale longer while retaining a majority of the previously collected data. See [How can I use it?](https://github.com/ehoop10/SKlearn-Crypto-prediction/blob/main/README.md#how-can-i-use-it) for a little for information on this.
@@ -76,4 +81,3 @@ The information provided by/with this project is for educational, informational,
 BTC - bc1q8wdfa8xvqhgdyudy9hdaqzelps2rarl9vzas4m <br/>
 ETH - 0x77f533a7D98B6888f90543959fB5b8Ea3539eE0c <br/>
 LTC - LSfCvorJ4FUUKZiKnw1f2xaH2akdUm44AS  <br/>
-SHIB (of course)- 0x8126B2E305f46C202cFecD04b673A960142AC26B
