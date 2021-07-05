@@ -15,7 +15,7 @@ There are four main files included as part of this repository, `Gui.pyw`, `graph
 # How can I use it?
 To use this project download/clone the repository and install the needed dependencies. Then execute the `Gui.pyw` file. (Note: if you are unaware .pyw simply means that the python console windows is not launched when the application is executed, unlike the standard .py extension.)
 
-Upon executing `Gui.pyw` you will be met with the main window. The first thing you must do in order to use the application is to add you Twitter API keys using the 'Edit API Keys' button in the top left of the window.
+Upon executing `Gui.pyw` you will be met with the main window. The first thing you must do in order to use the application is to add you Twitter API keys using the 'Edit API Keys' button in the top left of the window. See 'How can I get Twitter API keys?' for instructions. Oce you have your API keys entered, save them to `config.ini` by clicking the 'Set keys' button. You should then recieve a pop-up stating 'API keys set in config.ini', not simply click the 'Quit' button and restart the program. Great! Now your ready to use it! Enter a search term you would like to analyze along with a date in format YYYY-MM-DD and finally choose what result type you would like to pull. See Result Types for more info on this. Then click 'Execute'. After a few seconds the text box on the right will populate with the ouput data. If you wish to see a breakdown of the data pulled click 'Create Graph'.
 
 ### Main window
 ![Main View](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/main.JPG)
@@ -25,12 +25,15 @@ Upon executing `Gui.pyw` you will be met with the main window. The first thing y
 ![Edit API Keys](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/setAPI.JPG)
 
 
+### Edit API Keys pop-up
+![pop-up](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/setAPIpopup.JPG)
 
 
-If you wish to collect your own data you may modify and use `gatedata.py`. Otherwise, this project comes with a sample file `output.csv` containing 14220 entries collected from June 27, 2021 23:02:21 GMT to July 03, 2021 03:11:18 GMT. These data were collected in 30 second intervals and shifted such that the last column displays the last price of SHIB 30 seconds in the future from the rest of that respective row. Note that if you decide to collect your own data you will need to perform this shift on the final column up to match with the time interval you are trying to model for.
+### Example config.ini
+![config](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/configINI.JPG)
 
-Once you have your data collected and formatted you may execute `SHIB-ML-Gate.io.py` which allows you to select the input csv file. Once selected the script will ask for the number of prediction loops you would like to execute. A prediction loop is one iteration of the prediction cycle in which the script uses the trained model to predict the future price, waits for the timespan which it predicted for, pulls the actual price, compares this price to the predictions, and prints percent inaccuracy values for each of the 4 models. Additionally, a total average is kept such that if the predicition loop is run 10 times the average inaccuracies over the course of all 10 loops for each model are calculated and printed. This total average will print every ten loops if the number of loops selected is greater than 10.
-
+### Example Create Graph
+![Create Graph](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/createGraph.JPG)
 
 
 # Data
