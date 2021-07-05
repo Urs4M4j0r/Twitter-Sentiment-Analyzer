@@ -60,17 +60,9 @@ VADER Sentiment analysis scored the sentiment of a statement from -1 (most negat
 | Recent| Return only the most recent results in the response|
 | Popular| return only the most popular results in the response|
 
-
-
 # What is VADER?
-VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. If you would like more information see the project [here.](https://github.com/cjhutto/vaderSentiment).
+VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. If you would like more information see the project [here](https://github.com/cjhutto/vaderSentiment).
 
-# Requirements
-This script was written using Python v3.9.5 as well as gate_api, numpy, and sklearn which all may be install via PIP or by using the included requirements.txt (pip install -r requirements.txt)
-You **DO NOT** need to have a current/valid Gate.io account to use this script as the API functions called do not require API keys to work.
-
-# Disclaimer
-The information provided by/with this project is for educational, informational, and entertainment purposes only and is not intended to be financial advice. You should not make any decision on investing/trading or otherwise based on the information provided by this project and understand that you are using any and all information available through this project as your own risk.
 
 # Donations
 BTC - bc1q8wdfa8xvqhgdyudy9hdaqzelps2rarl9vzas4m <br/>
