@@ -4,18 +4,18 @@ This project is something I created trying to learn/experiment with creating gra
 # What does it do?
 There are four main files included as part of this repository, `Gui.pyw`, `graph.pyw`, `nlp.pyw` and `config.ini`.
 
-`Gui.pyw` - This is the main file as well as the one that should be executed to utilize the program. It creates the GUI and allows the user to enter all the required parameters to execute the program. Upon clicking the 'Execute' button the application will attempt to pull 100 tweets from the selected date using the provided keyword and spits out an average sentiment value which ranges from -1 to +1. Additionally, for ease a plan english description of the value is also printed, i.e. 'Good' or 'Bad'. [See How can I use it?](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/README.md#how-can-i-use-it) for more information on setting the parameters.
+`Gui.pyw` - This is the main file as well as the one that should be executed to utilize the program. It creates the GUI and allows the user to enter all the required parameters to execute the program. Upon clicking the 'Execute' button the application will attempt to pull 100 tweets from the selected date using the provided keyword and spits out an average sentiment value which ranges from -1 to +1. Additionally, for ease a plan english description of the value is also printed, i.e. 'Good' or 'Bad'. See [How can I use it?](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/README.md#how-can-i-use-it) for more information on setting the parameters.
 
-`graph.pyw` - The main GUI contains a button labeled 'Create Graph', after running the program with the needed parameters and once the results have been displayed you may click this button to create a bar graph which shows the number of tweets which fit into each defined sentiment category. See Sentiment categories for more information on this
+`graph.pyw` - The main GUI contains a button labeled 'Create Graph', after running the program with the needed parameters and once the results have been displayed you may click this button to create a bar graph which shows the number of tweets which fit into each defined sentiment category. See [Sentiment categories](https://github.com/ehoop10/Twitter-Sentiment-Analyzer#sentiment-categories) for more information on this
 
 `nlp.pyw` - This file contains the Natural Language Processing (NLP) component of this projects and is responsible for the actual sentiment analysis perfromed by using Vader Sentiment analysis.
 
-`config.ini` - This is the file which stores Twitter API keys which are needed to use this application. See How can I use it? for more information
+`config.ini` - This is the file which stores Twitter API keys which are needed to use this application. See [How can I use it?](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/README.md#how-can-i-use-it) for more information
 
 # How can I use it?
 To use this project download/clone the repository and install the needed dependencies. Then execute the `Gui.pyw` file. (Note: if you are unaware .pyw simply means that the python console windows is not launched when the application is executed, unlike the standard .py extension.)
 
-Upon executing `Gui.pyw` you will be met with the main window. The first thing you must do in order to use the application is to add you Twitter API keys using the 'Edit API Keys' button in the top left of the window. See 'How can I get Twitter API keys?' for instructions. Oce you have your API keys entered, save them to `config.ini` by clicking the 'Set keys' button. You should then recieve a pop-up stating 'API keys set in config.ini', not simply click the 'Quit' button and restart the program. Great! Now your ready to use it! Enter a search term you would like to analyze along with a date in format YYYY-MM-DD and finally choose what result type you would like to pull. See Result Types for more info on this. Then click 'Execute'. After a few seconds the text box on the right will populate with the ouput data. If you wish to see a breakdown of the data pulled click 'Create Graph'.
+Upon executing `Gui.pyw` you will be met with the main window. The first thing you must do in order to use the application is to add you Twitter API keys using the 'Edit API Keys' button in the top left of the window. See [How can I get Twitter API keys?](https://github.com/ehoop10/Twitter-Sentiment-Analyzer#how-can-i-get-twitter-api-keys) for instructions. Oce you have your API keys entered, save them to `config.ini` by clicking the 'Set keys' button. You should then recieve a pop-up stating 'API keys set in config.ini', not simply click the 'Quit' button and restart the program. Great! Now your ready to use it! Enter a search term you would like to analyze along with a date in format YYYY-MM-DD and finally choose what result type you would like to pull. See [Result Types](https://github.com/ehoop10/Twitter-Sentiment-Analyzer#result-types) for more info on this. Then click 'Execute'. After a few seconds the text box on the right will populate with the ouput data. If you wish to see a breakdown of the data pulled click 'Create Graph'.
 
 ### Main window
 ![Main View](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/main.JPG)
@@ -37,7 +37,7 @@ Upon executing `Gui.pyw` you will be met with the main window. The first thing y
 
 
 # How can I get Twitter API keys?
-To get twitter API keys see the Twitter documentatint for [How to get access to the Twitter API](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api)
+To get twitter API keys see the Twitter documentation for [How to get access to the Twitter API](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api)
 
 
 # Sentiment Categories
