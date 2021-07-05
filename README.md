@@ -45,13 +45,13 @@ VADER Sentiment analysis scored the sentiment of a statement from -1 (most negat
 
 | Numeric Score| Category|
 |--------------|---------|
-| -1.0 - -0.9| Very Bad|
-| -0.9 - -0.3| Bad|
-| -0.3 - -0.05| Slightly Bad|
-| -0.05 - 0.05| Neutral|
-| 0.05 - 0.3| Slightly Good|
-| 0.3 - 0.9| Good|
-| 0.9 - 1.0| Very Good|
+| -1.0 to -0.9| Very Bad|
+| -0.9 to -0.3| Bad|
+| -0.3 to -0.05| Slightly Bad|
+| -0.05 to 0.05| Neutral|
+| 0.05 to 0.3| Slightly Good|
+| 0.3 to 0.9| Good|
+| 0.9 to 1.0| Very Good|
 
 # Result Types
 
