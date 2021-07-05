@@ -36,22 +36,8 @@ Upon executing `Gui.pyw` you will be met with the main window. The first thing y
 ![Create Graph](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/createGraph.JPG)
 
 
-# Data
-For each of the three cryptocurrencies used the following data is collected
-
-|Data | Currency pair| Time (given as UNIX epoch)| Base volume| Change percentage| High 24h| Highest bid| Low 24h| Lowest ask| Quote volume| last|
-|-----|--------------|---------------------------|------------|------------------|---------|------------|--------|-----------|-------------|-----|
-|Details| The pair of currency used(ex BTC-USD)|  The UNIX time of when the data was gotten| The amount traded in the past 24 hours given in the base currency (eg BTC)| The live percent change in the currency| The 24 high price| The current highest bid on the currency| The 24 hour low price| The current lowest ask price| The base volume equivalent for the other part of the pair (eg USD)| The last actual price the currency was traded at|
-
-
-# Models (details taken from scikit-learn.org)
-|Model | Full name| Details| Link to documentation|
-|------|----------|--------|----------------------|
-|SGD | Stochastic Gradient Descent| Linear model fitted by minimizing a regularized empirical loss with SGD| [SGDRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)|
-|GBR | Gradient Boosting Regressor| Gradient Boosting for regression | [GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)|
-|LR | Linear Regression| Ordinary least squares Linear Regression | [LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)|
-|RF | Random Forest Regressor | A random forest regressor | [RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)|
-
+# How can I get Twitter API keys?
+To get twitter API keys see the Twitter documentatint for [How to get access to the Twitter API](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api)
 
 # FAQ
 ### Why SHIB?
