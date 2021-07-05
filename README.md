@@ -15,8 +15,14 @@ There are four main files included as part of this repository, `Gui.pyw`, `graph
 # How can I use it?
 To use this project download/clone the repository and install the needed dependencies. Then execute the `Gui.pyw` file. (Note: if you are unaware .pyw simply means that the python console windows is not launched when the application is executed, unlike the standard .py extension.)
 
+Upon executing `Gui.pyw` you will be met with the main window. The first thing you must do in order to use the application is to add you Twitter API keys using the 'Edit API Keys' button in the top left of the window.
 
+### Main window
 ![Main View](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/main.JPG)
+
+
+### Edit API Keys
+![Edit API Keys](https://github.com/ehoop10/Twitter-Sentiment-Analyzer/blob/main/Twitter%20Analyzer/readmeImages/setAPI.JPG)
 
 
 
