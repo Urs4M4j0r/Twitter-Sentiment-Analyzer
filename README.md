@@ -16,6 +16,8 @@ There are four main files included as part of this repository, `Gui.pyw`, `graph
 To use this project download/clone the repository and install the needed dependencies. Then execute the `Gui.pyw` file. (Note: if you are unaware .pyw simply means that the python console windows is not launched when the application is executed, unlike the standard .py extension.)
 
 
+![Main View](/readmeImages/main.jpg)
+
 
 
 
