@@ -4,19 +4,18 @@ from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import urllib.parse
 from collections import defaultdict
-
+import configparser
 
 analyser = SentimentIntensityAnalyzer()
-api = twitter.Api(consumer_key='yWQkZaRBw2AUgf93kgxIOxPqi',
-                  consumer_secret='KFs3Q2IkC8RCe2BIWpTSbMYjlaX72lEBeeo94KhEyMkddXag4o',
-                  access_token_key='844232093840359424-rfkNbuSbds6VIdWxkLSJvKE3D7fWg4D',
-                  access_token_secret='71VDU0qVSAOH9ftz3COELgyVSVnw4KHlpbpKtkQdQ1ex4')
+Config = configparser.ConfigParser()
+Config.read("config.ini")
+cfgfile = open("config.ini", 'r')
 
 
-
-def runNewsAssessment(text):
-    return analyser.polarity_scores(text)['compound']
-
+api = twitter.Api(consumer_key=Config.get('APIKeys', 'consumerkey'),
+                  consumer_secret=Config.get('APIKeys', 'consumersecret'),
+                  access_token_key=Config.get('APIKeys', 'accesstokenkey'),
+                  access_token_secret=Config.get('APIKeys', 'accesstokensecret'))
 
     
 def assess_sentiment(tweets):
@@ -36,14 +35,7 @@ def assess_sentiment(tweets):
         totalVader = totalVader + analyser.polarity_scores(statement)['compound']
         totalTB = totalTB + TextBlob(statement).sentiment.polarity
         score = float(analyser.polarity_scores(statement)['compound'])
-        '''
-        if float(analyser.polarity_scores(statement)['compound']) > 0.05:
-            pos = pos + 1
-        elif float(analyser.polarity_scores(statement)['compound']) < -0.05:
-            neg = neg + 1
-        else:
-            neu = neu + 1
-        '''
+        
         if score < 0.05 and score > -0.05:
             neu += 1
         elif score < -0.05 and score > -0.3:
@@ -58,8 +50,7 @@ def assess_sentiment(tweets):
             pos += 1
         elif score > 0.9:
             vpos += 1
-        #graph.createGraph(pos, neu, neg)
-        #print(i)
+            
     try:    
         totalAvgTB = totalTB / len(tweets)
         totalAvgVader = totalVader / len(tweets)
@@ -79,7 +70,6 @@ def createSearch(term, searchType, dateStart, numTweetToShow):
     except Exception as ex:
         numTweetToShow = str("5")
         
-    #termURL = urllib.parse.quote(term)
     termURL = urlEncode(term)
     searchString = "q=" + termURL + "&result_type=" + searchType + "&return_json=true&lang=en&tweet_mode=extended&since=" + dateStart + "&count=" + numTweetToShow
     results = api.GetSearch(raw_query=searchString)
